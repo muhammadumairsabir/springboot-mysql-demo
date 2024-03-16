@@ -15,6 +15,7 @@ pipeline {
         
         stage('build') {
             steps {
+                echo env.TESTING_AA
                 sh '''ls 
                     pwd'''
                 sh "mvn -Dmaven.test.failure.ignore=true clean package"
